@@ -1,0 +1,3 @@
+Try first:
+1. seperate channels
+2. Apply kernel differencing

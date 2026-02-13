@@ -357,7 +357,7 @@ def thin_edges_demo(image_path):
 # Example usage
 if __name__ == "__main__":
     # Replace with your image path
-    image_path = "unnamed.png"
+    image_path = "emma.jpg"
     
     # Run ASB edge detection with visualization
     original, variance, edges = asb_edge_detection(

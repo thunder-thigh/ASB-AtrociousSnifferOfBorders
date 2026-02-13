@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 from typing import Union, Tuple
 import os
+import sys
 
 def image_to_rgb_array(image_path: str) -> Union[np.ndarray, None]:
     """
@@ -107,7 +108,7 @@ def print_rgb_array(rgb_array: np.ndarray, max_rows: int = 10, max_cols: int = 1
 # Example usage
 if __name__ == "__main__":
     # Example path - replace with your image path
-    image_path = "/home/aashu/temp/unnamed.jpg"
+    image_path = sys.argv[1]
     
     # Convert image to RGB array
     rgb_array = image_to_rgb_array(image_path)

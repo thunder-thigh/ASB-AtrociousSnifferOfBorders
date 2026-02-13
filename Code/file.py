@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 from typing import Union, Tuple
 import os
+import sys
 
 def image_to_rgb_array(image_path: str) -> Union[np.ndarray, None]:
     """
@@ -137,9 +138,9 @@ def save_rgb_array(rgb_array: np.ndarray, output_path: str, include_metadata: bo
 # Example usage
 if __name__ == "__main__":
     # Replace these paths with your actual paths
-    image_path = "/home/aashu/temp/unnamed.jpg"  # Your input image path
-    rgb_txt_path = "/home/aashu/temp/rgb_values.txt"  # Where to save the RGB values text file
-    difference_image_path = "/home/aashu/temp/difference_image.png"  # Where to save the processed image
+    image_path = sys.argv[1]  # Your input image path
+    rgb_txt_path = "/tmp/rgb_values.txt"  # Where to save the RGB values text file
+    difference_image_path = "file_"+sys.argv[1]  # Where to save the processed image
     
     # Convert image to RGB array
     rgb_array = image_to_rgb_array(image_path)

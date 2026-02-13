@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 from typing import Union, Tuple
 import os
+import sys
 
 def image_to_rgb_array(image_path: str) -> Union[np.ndarray, None]:
     """
@@ -151,9 +152,9 @@ def print_rgb_array(rgb_array: np.ndarray, max_rows: int = 10, max_cols: int = 1
 # Example usage
 if __name__ == "__main__":
     # Replace these paths with your actual paths
-    image_path = "/home/aashu/temp/unnamed.jpg"  # Your input image path
-    rgb_txt_path = "/home/aashu/temp/rgb_values.txt"  # Where to save the RGB values text file
-    threshold_image_path = "/home/aashu/temp/contour_image.png"  # Where to save the threshold image
+    image_path = sys.argv[1]  # Your input image path
+    rgb_txt_path = "/tmp/rgb_values.txt"  # Where to save the RGB values text file
+    threshold_image_path = sys.argv[1]+"contour_image.png"  # Where to save the threshold image
     
     # Convert image to RGB array
     rgb_array = image_to_rgb_array(image_path)
